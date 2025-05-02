@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Mosaic from './components/Mosaic';
 import StoreInfo from './components/StoreInfo';
-import LocationSection from './components/LocationSection';
+import LocationSection from './components/Location';
 
 function App() {
   return (

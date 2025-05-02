@@ -2,8 +2,19 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
+import L from 'leaflet';
 
-const LocationSection: React.FC = () => {
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+});
+
+
+
+const Location: React.FC = () => {
   const position: [number, number] = [48.855278, 2.333611];
 
   return (
@@ -46,7 +57,7 @@ const LocationSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="h-[400px] relative">
+        <div className="h-[400px] relative z-0">
           <MapContainer 
             center={position} 
             zoom={15} 
@@ -69,4 +80,4 @@ const LocationSection: React.FC = () => {
   );
 };
 
-export default LocationSection;
+export default Location;
