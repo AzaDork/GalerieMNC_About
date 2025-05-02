@@ -1,5 +1,5 @@
 import React from 'react';
-import vitrineDessin from '/GalerieMNC_vitrineDessin.jpeg'
+import vitrineDessin from '/GalerieMNC_vitrineDessin.jpg'
 
 const StoreInfo: React.FC = () => {
   return (
